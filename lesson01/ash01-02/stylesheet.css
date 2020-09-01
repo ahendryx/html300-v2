@@ -7,7 +7,6 @@ body {
 
 h1 {
   font-size: 2em;
-  padding-bottom: 1em;
 }
 
 h2 {
@@ -17,4 +16,13 @@ h2 {
 
 p {
   font-size: 1em;
+}
+
+.intro {
+  font-size: 1.4em;
+  padding-bottom: 1em;
+}
+
+#answerOne, #answerTwo, #answerThree, #answerFour {
+  color: #e6005c;
 }
