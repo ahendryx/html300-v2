@@ -7,7 +7,7 @@
       <router-link to="/recipe-search">Recipe Search</router-link>
     </div>
     <router-view/>
-    <footer>SITE BY A. HENDRYX, 2020</footer> 
+    <footer>SITE BY A. HENDRYX, 2020</footer>
   </div>
 </template>
 

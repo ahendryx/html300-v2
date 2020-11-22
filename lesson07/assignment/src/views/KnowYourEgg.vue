@@ -88,7 +88,7 @@ export default {
     return {
       terms: [
         {termOne: "CAGE-FREE",
-        // Use a backslash after lines of text so Javasript knows the string is continued; otherwise, errors occur
+        // Use a backslash after lines of text so Javascript knows the string is continued; otherwise, errors occur
           defOneA: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim \
           lobortis scelerisque fermentum dui faucibus in. Facilisis gravida \
