@@ -1,38 +1,14 @@
 <template>
 <div class="row pb-5">
   <h1 class="col-12 pt-5 pb-5">How to Cook an Egg: 4 Methods</h1>
-  <section class="col-sm-6">
-  <div class="pb-5" v-for="technique in techniques" v-bind:key="technique.title">
-    <img :src="technique.imgOne" :alt="technique.title" width=80%>
-    <h3 class="mt-4 pb-1">{{technique.titleOne}}</h3>
-    <p>{{technique.contentOneA}}</p>
-    <p>{{technique.contentOneB}}</p>
-</div>
-</section>
-<section class="col-sm-6">
-  <div class="pb-5" v-for="technique in techniques" v-bind:key="technique.title">
-    <img :src="technique.imgTwo" :alt="technique.title" width=80%>
-    <h3 class="mt-4 pb-1">{{technique.titleTwo}}</h3>
-    <p>{{technique.contentTwoA}}</p>
-    <p>{{technique.contentTwoB}}</p>
-  </div>
-</section>
-<section class="col-sm-6">
-  <div class="pb-5" v-for="technique in techniques" v-bind:key="technique.title">
-    <img :src="technique.imgThree" :alt="technique.title" width=80%>
-    <h3 class="mt-4 pb-1">{{technique.titleThree}}</h3>
-    <p>{{technique.contentThreeA}}</p>
-    <p>{{technique.contentThreeB}}</p>
-  </div>
-</section>
-<section class="col-sm-6">
-  <div class="pb-5" v-for="technique in techniques" v-bind:key="technique.title">
-    <img :src="technique.imgFour" :alt="technique.title" width=80%>
-    <h3 class="mt-4 pb-1">{{technique.titleFour}}</h3>
-    <p>{{technique.contentFourA}}</p>
-    <p>{{technique.contentFourB}}</p>
-  </div>
-</section>
+  <section class="col-sm-10">
+    <div class="pb-5" v-for="technique in techniques" v-bind:key="technique.title">
+      <img :src="technique.img" :alt="technique.title" width=60%>
+      <h3 class="mt-4 pb-1">{{technique.title}}</h3>
+      <p>{{technique.contentA}}</p>
+      <p>{{technique.contentB}}</p>
+    </div>
+  </section>
 </div>
 </template>
 
@@ -42,10 +18,10 @@ export default {
   data () {
     return {
       techniques: [
-        {titleOne: "BOILED",
-          imgOne: require('../assets/hard-boiled.jpg'),
+        {title: "BOILED",
+          img: require('../assets/hard-boiled.jpg'),
           // Use a backslash after lines of text so Javascript knows the string is continued; otherwise, errors occur
-          contentOneA: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod \
+          contentA: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod \
           tempor incididunt ut labore et dolore magna aliqua. In egestas erat imperdiet sed euismod.\
           Maecenas sed enim ut sem viverra aliquet eget sit amet. Libero volutpat sed cras ornare \
           arcu dui vivamus arcu. Egestas sed sed risus pretium quam vulputate dignissim. Leo urna \
@@ -54,7 +30,7 @@ export default {
           dignissim convallis aenean. At elementum eu facilisis sed odio morbi quis commodo. \
           Fringilla ut morbi tincidunt augue interdum velit euismod. Aliquam ultrices sagittis orci \
           a scelerisque purus semper eget duis.",
-          contentOneB: "Sit amet luctus venenatis lectus magna fringilla urna porttitor. Habitasse \
+          contentB: "Sit amet luctus venenatis lectus magna fringilla urna porttitor. Habitasse \
           platea dictumst quisque sagittis purus sit amet volutpat. Gravida rutrum quisque non tellus \
           orci ac auctor. Ut sem viverra aliquet eget sit amet tellus cras adipiscing. Ultrices eros \
           in cursus turpis massa. Mollis nunc sed id semper risus in hendrerit gravida rutrum. Sed \
@@ -67,10 +43,10 @@ export default {
           purus sit. Arcu dictum varius duis at consectetur lorem donec. Adipiscing diam donec \
           adipiscing tristique risus nec feugiat in. Eu turpis egestas pretium aenean pharetra magna \
           ac placerat.",
-          // Second set
-          titleTwo: "SCRAMBLED",
-          imgTwo: require('../assets/scrambled.jpg'),
-          contentTwoA: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod \
+        },
+        {title: "SCRAMBLED",
+          img: require('../assets/scrambled.jpg'),
+          contentA: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod \
           tempor incididunt ut labore et dolore magna aliqua. In egestas erat imperdiet sed euismod.\
           Maecenas sed enim ut sem viverra aliquet eget sit amet. Libero volutpat sed cras ornare \
           arcu dui vivamus arcu. Egestas sed sed risus pretium quam vulputate dignissim. Leo urna \
@@ -79,7 +55,7 @@ export default {
           dignissim convallis aenean. At elementum eu facilisis sed odio morbi quis commodo. \
           Fringilla ut morbi tincidunt augue interdum velit euismod. Aliquam ultrices sagittis orci \
           a scelerisque purus semper eget duis.",
-          contentTwoB: "Sit amet luctus venenatis lectus magna fringilla urna porttitor. Habitasse \
+          contentB: "Sit amet luctus venenatis lectus magna fringilla urna porttitor. Habitasse \
           platea dictumst quisque sagittis purus sit amet volutpat. Gravida rutrum quisque non tellus \
           orci ac auctor. Ut sem viverra aliquet eget sit amet tellus cras adipiscing. Ultrices eros \
           in cursus turpis massa. Mollis nunc sed id semper risus in hendrerit gravida rutrum. Sed \
@@ -92,10 +68,10 @@ export default {
           purus sit. Arcu dictum varius duis at consectetur lorem donec. Adipiscing diam donec \
           adipiscing tristique risus nec feugiat in. Eu turpis egestas pretium aenean pharetra magna \
           ac placerat.",
-          // Third set
-          titleThree: "FRIED",
-          imgThree: require('../assets/overeasy.jpg'),
-          contentThreeA: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod \
+        },
+        {title: "FRIED",
+          img: require('../assets/overeasy.jpg'),
+          contentA: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod \
           tempor incididunt ut labore et dolore magna aliqua. In egestas erat imperdiet sed euismod.\
           Maecenas sed enim ut sem viverra aliquet eget sit amet. Libero volutpat sed cras ornare \
           arcu dui vivamus arcu. Egestas sed sed risus pretium quam vulputate dignissim. Leo urna \
@@ -104,7 +80,7 @@ export default {
           dignissim convallis aenean. At elementum eu facilisis sed odio morbi quis commodo. \
           Fringilla ut morbi tincidunt augue interdum velit euismod. Aliquam ultrices sagittis orci \
           a scelerisque purus semper eget duis.",
-          contentThreeB: "Sit amet luctus venenatis lectus magna fringilla urna porttitor. Habitasse \
+          contentB: "Sit amet luctus venenatis lectus magna fringilla urna porttitor. Habitasse \
           platea dictumst quisque sagittis purus sit amet volutpat. Gravida rutrum quisque non tellus \
           orci ac auctor. Ut sem viverra aliquet eget sit amet tellus cras adipiscing. Ultrices eros \
           in cursus turpis massa. Mollis nunc sed id semper risus in hendrerit gravida rutrum. Sed \
@@ -117,10 +93,10 @@ export default {
           purus sit. Arcu dictum varius duis at consectetur lorem donec. Adipiscing diam donec \
           adipiscing tristique risus nec feugiat in. Eu turpis egestas pretium aenean pharetra magna \
           ac placerat.",
-          // Fourth set
-          titleFour: "POACHED",
-          imgFour: require('../assets/poached.jpg'),
-          contentFourA: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod \
+        },
+        {title: "POACHED",
+          img: require('../assets/poached.jpg'),
+          contentA: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod \
           tempor incididunt ut labore et dolore magna aliqua. In egestas erat imperdiet sed euismod.\
           Maecenas sed enim ut sem viverra aliquet eget sit amet. Libero volutpat sed cras ornare \
           arcu dui vivamus arcu. Egestas sed sed risus pretium quam vulputate dignissim. Leo urna \
@@ -129,7 +105,7 @@ export default {
           dignissim convallis aenean. At elementum eu facilisis sed odio morbi quis commodo. \
           Fringilla ut morbi tincidunt augue interdum velit euismod. Aliquam ultrices sagittis orci \
           a scelerisque purus semper eget duis.",
-          contentFourB: "Sit amet luctus venenatis lectus magna fringilla urna porttitor. Habitasse \
+          contentB: "Sit amet luctus venenatis lectus magna fringilla urna porttitor. Habitasse \
           platea dictumst quisque sagittis purus sit amet volutpat. Gravida rutrum quisque non tellus \
           orci ac auctor. Ut sem viverra aliquet eget sit amet tellus cras adipiscing. Ultrices eros \
           in cursus turpis massa. Mollis nunc sed id semper risus in hendrerit gravida rutrum. Sed \
