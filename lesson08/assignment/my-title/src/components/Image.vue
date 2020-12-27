@@ -1,6 +1,6 @@
 <template>
   <div>
-      <img :src="require(`../assets/${imageName}`)" width=80%>
+      <img :src="require(`../assets/${imageName}`)" width=100%>
   </div>
 </template>
 
@@ -9,10 +9,6 @@
 export default {
   name: 'image',
   props: ['imageName'],
+  type: Object
 }
 </script>
-
-
-
-
-<!-- <img :src="technique.imgThree" :alt="technique.title" width=80%> -->
