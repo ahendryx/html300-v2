@@ -1,10 +1,9 @@
 <template>
 <div class="row pb-5">
   <h1 class="col-12 pt-5 pb-5">How to Cook an Egg: 4 Methods</h1>
-  <!--  <image v-for="image in images" v-bind:key="image.alt"></image>  -->
-  <section class="col-sm-6">
+  <section class="col-sm-8">
     <div class="pb-5" v-for="technique in techniques" v-bind:key="technique.title">
-      <image-custom :imageName="technique.img"></image-custom>
+      <image-custom v-on:click="show = !show" :imageName="technique.img"></image-custom>
       <h3 class="mt-4 pb-1">{{technique.title}}</h3>
       <p>{{technique.contentA}}</p>
       <p>{{technique.contentB}}</p>
@@ -15,17 +14,15 @@
 
 <script>
 import image from '../components/Image.vue';
-//import Header from '../components/Header.vue';
-//import mixin from '../mixin';
 
 export default {
   name: 'methods',
     components: {
       'image-custom': image
-//    'method-header': Header
     },
   data () {
     return {
+      show: true,
       techniques: [
         {title: "BOILED",
           img: 'hard-boiled.jpg',
@@ -52,8 +49,8 @@ export default {
           purus sit. Arcu dictum varius duis at consectetur lorem donec. Adipiscing diam donec \
           adipiscing tristique risus nec feugiat in. Eu turpis egestas pretium aenean pharetra magna \
           ac placerat.",
-        },
-        {title: "SCRAMBLED",
+          },
+          {title: "SCRAMBLED",
           img: 'scrambled.jpg',
           contentA: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod \
           tempor incididunt ut labore et dolore magna aliqua. In egestas erat imperdiet sed euismod.\
@@ -77,8 +74,8 @@ export default {
           purus sit. Arcu dictum varius duis at consectetur lorem donec. Adipiscing diam donec \
           adipiscing tristique risus nec feugiat in. Eu turpis egestas pretium aenean pharetra magna \
           ac placerat.",
-        },
-        { title: "FRIED",
+          },
+          { title: "FRIED",
           img: 'overeasy.jpg',
           contentA: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod \
           tempor incididunt ut labore et dolore magna aliqua. In egestas erat imperdiet sed euismod.\
@@ -102,7 +99,7 @@ export default {
           purus sit. Arcu dictum varius duis at consectetur lorem donec. Adipiscing diam donec \
           adipiscing tristique risus nec feugiat in. Eu turpis egestas pretium aenean pharetra magna \
           ac placerat.",
-        },
+          },
           {title: "POACHED",
           img: 'poached.jpg',
           contentA: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod \
@@ -127,29 +124,15 @@ export default {
           purus sit. Arcu dictum varius duis at consectetur lorem donec. Adipiscing diam donec \
           adipiscing tristique risus nec feugiat in. Eu turpis egestas pretium aenean pharetra magna \
           ac placerat.",
-        }
-      ],
+          }
+        ],
       images: [
       {id: 1, src: require('../assets/hard-boiled.jpg'), alt:'Image of hard-boiled eggs'},
       {id: 2, src: require('../assets/scrambled.jpg'), alt:'Image of scrambled eggs'},
       {id: 3, src: require('../assets/overeasy.jpg'), alt:'Image of overeasy eggs'},
       {id: 4, src: require('../assets/poached.jpg'), alt:'Image of poached eggs'},
-    ],
-    //,
-    //  images: [
-    //    {imageOne: require('../assets/hard-boiled.jpg'), title: "Hard-boiled eggs",
-    //     imageTwo: require('../assets/scrambled.jpg'),
-    //     imageThree: require('../assets/overeasy.jpg'),
-    //     imageFour: require('../assets/poached.jpg')
-    //   }
-    //  ]
+      ],
     }
   }
-//  ,
-//  mixins: [mixin]
 }
 </script>
-
-<!--
-
--->
